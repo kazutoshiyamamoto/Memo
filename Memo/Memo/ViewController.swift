@@ -24,7 +24,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    // 編集中に変更があるたびに呼び出されるデリゲートメソッド
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let tmpStr = textField.text! as NSString
+        let replaceString = tmpStr.replacingCharacters(in: range, with: string)
+        if replaceString == "" {
+            // エラー処理or何もしない
+        } else {
+            // ユーザーデフォルトに保存する
+        }
+        // テキストフィールドを更新する
+        return true
+    }
 
 }
 
