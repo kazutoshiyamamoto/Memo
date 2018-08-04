@@ -38,6 +38,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // テキストフィールドを更新する
         return true
     }
+    
+    // クリアボタンがタップされると呼ばれるデリゲートメソッド
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        writeMemo.text = ""
+        return true
+    }
 
 }
 
