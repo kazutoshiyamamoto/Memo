@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var writeMemo: UITextField!
     @IBOutlet weak var readMemo: UITextField!
+    @IBOutlet weak var editCompletion: UIButton!
     
     // 編集終了でキーボードを下げる
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
@@ -50,6 +51,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         writeMemo.text = ""
         return true
     }
-
+    
+    @IBAction func editCompletionButton(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
 }
 
