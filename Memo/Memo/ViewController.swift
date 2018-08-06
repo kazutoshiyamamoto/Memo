@@ -13,6 +13,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var writeMemo: UITextField!
     @IBOutlet weak var readMemo: UITextField!
     
+    // 編集終了でキーボードを下げる
+    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

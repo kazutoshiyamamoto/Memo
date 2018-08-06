@@ -44,7 +44,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nNe-AW-Oux" appends="YES" id="CDn-78-etg"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="readMemo" destination="rzQ-Hc-Uj0" id="iaa-3v-4bp"/>
@@ -52,6 +56,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nNe-AW-Oux">
+                    <connections>
+                        <action selector="tapView:" destination="BYZ-38-t0r" id="xFd-em-sKG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
