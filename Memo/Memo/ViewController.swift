@@ -11,8 +11,12 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var writeMemo: UITextField!
-    @IBOutlet weak var readMemo: UITextField!
-    @IBOutlet weak var editCompletion: UIButton!
+    @IBOutlet weak var readMemoButton: UIButton!
+    @IBOutlet weak var editCompletionButton: UIButton!
+    
+    
+    @IBOutlet weak var readLabel: UILabel!
+    
     
     // 編集終了でキーボードを下げる
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
@@ -35,12 +39,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // 編集中に変更があるたびに呼び出されるデリゲートメソッド
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        let tmpStr = textField.text! as NSString
+        let tmpStr = writeMemo.text! as NSString
         let replaceString = tmpStr.replacingCharacters(in: range, with: string)
-        if replaceString == "" {
-            // エラー処理or何もしない
-        } else {
+        if replaceString != "" {
             // ユーザーデフォルトに保存する
+            let defaults = UserDefaults.standard
+            defaults.set(tmpStr, forKey: "edit")
+            
+        } else {
+            // エラー処理or何もしない
         }
         // テキストフィールドを更新する
         return true
@@ -52,8 +59,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    @IBAction func readRecord(_ sender: Any) {
+        
+        
+    }
+    
     @IBAction func editCompletionButton(_ sender: Any) {
         view.endEditing(true)
+        
     }
     
 }
