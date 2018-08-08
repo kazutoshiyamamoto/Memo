@@ -30,15 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
-                                    <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Jb-EW-IwR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuc-LJ-P5T">
-                                <rect key="frame" x="270" y="46" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="完了"/>
-                                <connections>
-                                    <action selector="editCompletionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T09-vQ-MR9"/>
+                                    <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8T5-yi-xps"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT1-C9-yj0">
@@ -53,7 +45,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="読み込み"/>
                                 <connections>
-                                    <action selector="readRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cU-Si-NCI"/>
+                                    <action selector="readRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HW6-Qa-E4q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,7 +57,6 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="editCompletionButton" destination="kuc-LJ-P5T" id="uQO-uD-bS5"/>
                         <outlet property="readLabel" destination="eT1-C9-yj0" id="fBR-Ug-IEK"/>
                         <outlet property="writeMemo" destination="Yo7-rK-iSv" id="Pa4-QL-JSC"/>
                     </connections>
