@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,42 +15,55 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yo7-rK-iSv">
-                                <rect key="frame" x="54" y="102" width="281" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yo7-rK-iSv">
+                                <rect key="frame" x="50" y="119" width="275" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qos-s6-5Tg">
-                                <rect key="frame" x="172" y="152" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qos-s6-5Tg">
+                                <rect key="frame" x="100" y="213" width="175" height="30"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
                                     <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8T5-yi-xps"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT1-C9-yj0">
-                                <rect key="frame" x="40" y="274" width="295" height="193"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7S-pp-MHK">
-                                <rect key="frame" x="163" y="475" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7S-pp-MHK">
+                                <rect key="frame" x="100" y="347" width="175" height="30"/>
                                 <state key="normal" title="読み込み"/>
                                 <connections>
                                     <action selector="readRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HW6-Qa-E4q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT1-C9-yj0">
+                                <rect key="frame" x="0.0" y="496" width="375" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="282" id="p2s-C3-CcP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Qos-s6-5Tg" firstAttribute="top" secondItem="Yo7-rK-iSv" secondAttribute="bottom" constant="64" id="3MY-hH-rzq"/>
+                            <constraint firstItem="Y7S-pp-MHK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="347" id="3ac-EV-waF"/>
+                            <constraint firstItem="eT1-C9-yj0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Mk-6t-uyN"/>
+                            <constraint firstItem="Yo7-rK-iSv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Cbx-LR-1pX"/>
+                            <constraint firstItem="Qos-s6-5Tg" firstAttribute="trailing" secondItem="Y7S-pp-MHK" secondAttribute="trailing" id="H7O-Wd-5Ra"/>
+                            <constraint firstAttribute="trailing" secondItem="eT1-C9-yj0" secondAttribute="trailing" id="dB9-Va-yw5"/>
+                            <constraint firstItem="eT1-C9-yj0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="f1E-z1-Y6F"/>
+                            <constraint firstItem="Y7S-pp-MHK" firstAttribute="centerX" secondItem="eT1-C9-yj0" secondAttribute="centerX" id="fyd-ov-RuE"/>
+                            <constraint firstItem="Qos-s6-5Tg" firstAttribute="leading" secondItem="Y7S-pp-MHK" secondAttribute="leading" id="gB0-Eh-1C1"/>
+                            <constraint firstItem="Yo7-rK-iSv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="ma4-OL-IUl"/>
+                            <constraint firstItem="Yo7-rK-iSv" firstAttribute="centerX" secondItem="Qos-s6-5Tg" secondAttribute="centerX" id="w4U-aY-0dW"/>
+                            <constraint firstItem="Qos-s6-5Tg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="zPT-n7-BBm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="nNe-AW-Oux" appends="YES" id="CDn-78-etg"/>
