@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         readLabel.text = value
     }
     
-    // 編集終了でキーボードを下げる
+    // タップでキーボードを下げる
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
