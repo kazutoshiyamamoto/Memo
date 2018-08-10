@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
-                                    <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8T5-yi-xps"/>
+                                    <action selector="memorizeText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsE-kU-WzQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7S-pp-MHK">
@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="読み込み"/>
                                 <connections>
-                                    <action selector="readRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HW6-Qa-E4q"/>
+                                    <action selector="readText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3y-KH-8BC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT1-C9-yj0">
@@ -57,8 +57,8 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="readLabel" destination="eT1-C9-yj0" id="fBR-Ug-IEK"/>
-                        <outlet property="writeMemo" destination="Yo7-rK-iSv" id="Pa4-QL-JSC"/>
+                        <outlet property="showLabel" destination="eT1-C9-yj0" id="RHF-Js-7zF"/>
+                        <outlet property="textMemoryField" destination="Yo7-rK-iSv" id="L1C-y3-h2Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

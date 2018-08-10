@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var writeMemo: UITextField!
-    @IBOutlet weak var readLabel: UILabel!
+    @IBOutlet weak var textMemoryField: UITextField!
+    @IBOutlet weak var showLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        writeMemo.delegate = self
+        textMemoryField.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,20 +25,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     // ユーザーデフォルトに保存する
-    @IBAction func testButton(_ sender: Any) {
-        let tmpStr = writeMemo.text! as NSString
+    @IBAction func memorizeText(_ sender: Any) {
+        let writtenText = textMemoryField.text! as NSString
         let defaults = UserDefaults.standard
-        defaults.set(tmpStr, forKey: "edit")
+        defaults.set(writtenText, forKey: "memo")
         view.endEditing(true)
     }
-    
     // 保存したテキストをラベルに表示する
-    @IBAction func readRecord(_ sender: Any) {
+    @IBAction func readText(_ sender: Any) {
         let defaults = UserDefaults.standard
-        let value = defaults.string(forKey: "edit")
-        readLabel.text = value
+        let value = defaults.string(forKey: "memo")
+        showLabel.text = value
     }
-    
     // タップでキーボードを下げる
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
