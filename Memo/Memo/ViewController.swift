@@ -42,15 +42,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-     // 編集中に変更があるたびに呼び出されるデリゲートメソッド
+     // 編集中に変更があるたびに呼び出されるデリゲートメソッド（変換が適用されない）
         func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     
-            let tmpStr = textMemoryField.text! as NSString
-            let replaceString = tmpStr.replacingCharacters(in: range, with: string)
+            let writtenText = textMemoryField.text! as NSString
+            let replaceString = writtenText.replacingCharacters(in: range, with: string)
             if replaceString != "" {
                 // ユーザーデフォルトに保存する
                 let defaults = UserDefaults.standard
-                defaults.set(tmpStr, forKey: "edit")
+                defaults.set(writtenText, forKey: "memo")
             } else {
                 // エラー処理
                 print("Error")
