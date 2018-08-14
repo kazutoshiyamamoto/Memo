@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     // テキストビューのframe
     var originalFrame: CGRect?
     
+    
     override func viewDidAppear(_ animated: Bool) {
         // テキストビューの元のframeを保存する
         originalFrame = textMemoryView.frame
@@ -25,7 +26,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+        
+        // ファイルから読み込む
+        readFromFile()
+        
+        // 通知センターのオブジェクトを作る
+        let notification = NotificationCenter.default
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +57,7 @@ class ViewController: UIViewController {
     }
     
     // ファイルからの読み込み
-    @IBAction func readFile(_ sender: Any) {
+    func readFromFile() {
         do {
             let textData = try String(contentsOfFile: thePass, encoding: String.Encoding.utf8)
             textMemoryView.text = textData
@@ -68,6 +77,6 @@ class ViewController: UIViewController {
     
     
     
-
+    
 }
 

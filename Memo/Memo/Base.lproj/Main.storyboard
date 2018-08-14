@@ -30,9 +30,6 @@
                                 <rect key="frame" x="20" y="202" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="読み込み"/>
-                                <connections>
-                                    <action selector="readFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqd-gn-oU8"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ta6-yb-gxt">
                                 <rect key="frame" x="0.0" y="297" width="414" height="203"/>
