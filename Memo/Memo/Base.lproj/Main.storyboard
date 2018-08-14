@@ -43,9 +43,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ye9-ZI-uGi">
-                                <rect key="frame" x="184" y="202" width="46" height="30"/>
+                                <rect key="frame" x="192" y="202" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="保存"/>
                                 <connections>
                                     <action selector="saveToFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTh-TB-4xH"/>
                                 </connections>
@@ -54,7 +54,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Cansel" id="dz7-Fi-47m"/>
+                                    <barButtonItem title="Cansel" id="dz7-Fi-47m">
+                                        <connections>
+                                            <action selector="cansel:" destination="BYZ-38-t0r" id="YbW-Zq-sDj"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Save" id="5rZ-4B-xFv"/>
                                 </items>
                             </toolbar>

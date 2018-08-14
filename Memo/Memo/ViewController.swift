@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var textMemoryView: UITextView!
-    @IBOutlet weak var showView: UITextView!
     
     // テキストファイルのパス
     let thePass = NSHomeDirectory() + "/Documents/myTextfile.txt"
@@ -21,9 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-
-        
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,6 +50,18 @@ class ViewController: UIViewController {
             showView.text = "保存に失敗。 \n \(error)"
         }
     }
+    
+    // 編集キャンセルボタン
+    @IBAction func cansel(_ sender: UIBarButtonItem) {
+        // キーボードを下げる
+        view.endEditing(true)
+        // ファイルから読み込む
+        readFile()
+    }
+    
+    
+    
+    
 
 }
 
