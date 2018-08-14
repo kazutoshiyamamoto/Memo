@@ -96,5 +96,11 @@ class ViewController: UIViewController {
         textMemoryView.frame = textViewFrame
     }
     
+    // キーボードが退場した時の処理
+    @objc func keyboardDidHide(_ notification: Notification) {
+        // テキストビューのサイズを戻す
+        textMemoryView.frame = originalFrame!
+    }
+    
 }
 
