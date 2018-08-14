@@ -84,5 +84,17 @@ class ViewController: UIViewController {
         // keyboardChangeFrameも発生するのでそちらで処理する
     }
     
+    // キーボードのサイズが変化した時の処理
+    @objc func keyboardChangeFrame(_ notification: Notification) {
+        // キーボードのframeを調べる
+        let userInfo = (notification as NSNotification).userInfo!
+        let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        // キーボードで隠れないようにテキストビューの高さを変更する
+        var textViewFrame = textMemoryView.frame
+        textViewFrame.size.height = keyboardFrame.minY - textViewFrame.minY - 5
+        textMemoryView.frame = textViewFrame
+    }
+    
 }
 
