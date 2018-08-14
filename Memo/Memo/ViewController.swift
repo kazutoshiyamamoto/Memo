@@ -42,12 +42,13 @@ class ViewController: UIViewController {
         }
     }
     
+    // ファイルからの読み込み
     @IBAction func readFile(_ sender: Any) {
         do {
             let textData = try String(contentsOfFile: thePass, encoding: String.Encoding.utf8)
-            showView.text = textData
+            textMemoryView.text = textData
         } catch let error as NSError {
-            showView.text = "保存に失敗。 \n \(error)"
+            print("保存に失敗。 \n \(error)")
         }
     }
     
@@ -56,7 +57,7 @@ class ViewController: UIViewController {
         // キーボードを下げる
         view.endEditing(true)
         // ファイルから読み込む
-        readFile()
+        readFromFile()
     }
     
     
