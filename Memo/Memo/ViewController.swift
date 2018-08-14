@@ -20,8 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //        // textFieldDidChangeを識別するよう指定する
-        //        textMemoryView.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
+
         
     }
     
@@ -52,37 +51,6 @@ class ViewController: UIViewController {
             showView.text = "保存に失敗。 \n \(error)"
         }
     }
-    
-    
-    //    // 入力したテキストをユーザーデフォルトに保存
-    //    @objc func textFieldDidChange(_ textField: UITextField) {
-    //        let writtenText = textMemoryView.text! as NSString
-    //        let defaults = UserDefaults.standard
-    //        defaults.set(writtenText, forKey: "memo")
-    //    }
-    //
-    //    // 保存したテキストをラベルに表示する
-    //    @IBAction func readText(_ sender: Any) {
-    //        let defaults = UserDefaults.standard
-    //        let value = defaults.string(forKey: "memo")
-    //        showLabel.text = value
-    //    }
-    //
-    //    // 編集完了する
-    //    @IBAction func memorizeText(_ sender: Any) {
-    //        view.endEditing(true)
-    //    }
-    //
-    //    // タップでキーボードを下げる
-    //    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
-    //        view.endEditing(true)
-    //    }
-    //
-    // クリアボタンがタップされると呼ばれるデリゲートメソッド
-    //    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-    //        writeMemo.text = ""
-    //        return true
-    //    }
-    
+
 }
 
