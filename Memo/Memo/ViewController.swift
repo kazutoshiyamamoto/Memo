@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     // テキストビューのframe
     var originalFrame: CGRect?
     
-    
     override func viewDidAppear(_ animated: Bool) {
         // テキストビューの元のframeを保存する
         originalFrame = textMemoryView.frame
@@ -25,7 +24,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         // ファイルから読み込む
         readFromFile()
@@ -81,9 +79,10 @@ class ViewController: UIViewController {
         readFromFile()
     }
     
-    
-    
-    
+    // キーボードが表示された時に実行する
+    @objc func keyboardDidShow(_ notification: Notification) {
+        // keyboardChangeFrameも発生するのでそちらで処理する
+    }
     
 }
 
