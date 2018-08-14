@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         // 通知センターのオブジェクトを作る
         let notification = NotificationCenter.default
         
+        // キーボードが登場した
+        notification.addObserver(self, selector: #selector(ViewController.keyboardDidShow(_:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        
         
         
     }
