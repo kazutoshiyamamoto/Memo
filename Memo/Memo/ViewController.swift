@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     // テキストファイルのパス
     let thePass = NSHomeDirectory() + "/Documents/myTextfile.txt"
+    // テキストビューのframe
+    var originalFrame: CGRect?
     
     override func viewDidLoad() {
         super.viewDidLoad()
