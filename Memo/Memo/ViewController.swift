@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     // テキストビューのframe
     var originalFrame: CGRect?
     
+    override func viewDidAppear(_ animated: Bool) {
+        // テキストビューの元のframeを保存する
+        originalFrame = textMemoryView.frame
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
