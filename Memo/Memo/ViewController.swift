@@ -36,6 +36,9 @@ class ViewController: UIViewController {
         // キーボードが登場した
         notification.addObserver(self, selector: #selector(ViewController.keyboardDidShow(_:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         
+        // キーボードのframeが変更された
+        notification.addObserver(self, selector: #selector(ViewController.keyboardChangeFrame(_:), name: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil)
+        
         
         
     }
