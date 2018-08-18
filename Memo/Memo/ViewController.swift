@@ -102,5 +102,19 @@ class ViewController: UIViewController {
         textMemoryView.frame = originalFrame!
     }
     
+    // タップでキーボードを下げる
+    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
+        // キーボードを下げる
+        view.endEditing(true)
+        // 保存するテキストデータ
+        let textData = textMemoryView.text
+        // テキストデータの保存をトライする
+        do {
+            try textData?.write(toFile: thePass, atomically: true, encoding: String.Encoding.utf8)
+        } catch let error as NSError {
+            print("保存に失敗。 \n \(error)")
+        }
+    }
+    
 }
 
