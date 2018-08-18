@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         
         // キーボードが退場した
         notification.addObserver(self, selector: #selector(ViewController.keyboardDidHide(_:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
-        
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -104,6 +104,7 @@ class ViewController: UIViewController {
     
     // タップでキーボードを下げる
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
+        
         // キーボードを下げる
         view.endEditing(true)
         // 保存するテキストデータ
@@ -116,5 +117,17 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func swipeGesture(_ sender: UISwipeGestureRecognizer) {
+        // キーボードを下げる
+        view.endEditing(true)
+        // 保存するテキストデータ
+        let textData = textMemoryView.text
+        // テキストデータの保存をトライする
+        do {
+            try textData?.write(toFile: thePass, atomically: true, encoding: String.Encoding.utf8)
+        } catch let error as NSError {
+            print("保存に失敗。 \n \(error)")
+        }
+    }
 }
 
