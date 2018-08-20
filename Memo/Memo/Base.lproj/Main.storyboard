@@ -46,7 +46,7 @@
                                             <state key="normal" title="read"/>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem title="Save" id="5rZ-4B-xFv">
+                                    <barButtonItem title="Save" width="307" id="5rZ-4B-xFv">
                                         <connections>
                                             <action selector="saveToFile:" destination="BYZ-38-t0r" id="pEF-WV-i27"/>
                                         </connections>
