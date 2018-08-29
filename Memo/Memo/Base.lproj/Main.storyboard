@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--メモリスト-->
         <scene sceneID="mvR-Mf-JIY">
             <objects>
                 <tableViewController id="2rI-eG-bfP" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="2rI-eG-bfP" id="lsn-4O-dXh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="JT8-Z9-rrN"/>
+                    <navigationItem key="navigationItem" title="メモリスト" id="JT8-Z9-rrN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWW-Z5-FjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
