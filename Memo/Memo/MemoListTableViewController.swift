@@ -27,15 +27,17 @@ class MemoListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    // セクションの個数
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
+    // セクション内の行数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        // 配列webListの値の個数
+        return memoList.count
     }
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
