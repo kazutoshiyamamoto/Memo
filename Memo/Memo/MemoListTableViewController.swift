@@ -84,14 +84,18 @@ class MemoListTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // セグエで移動する前にデータを受け渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // セグエがshowWebPageのときの処理
+        if segue.identifier == "showMemoPage" {
+            // タップした行番号を取り出す
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                // 行のデータを取り出す
+                let memoData = memoList[(indexPath as NSIndexPath).row]
+                // 移動先のビューコントローラのdataプロパティに値を設定する
+                (segue.destination as! ViewController).data = memoData
+            }
+        }
     }
-    */
 
 }
