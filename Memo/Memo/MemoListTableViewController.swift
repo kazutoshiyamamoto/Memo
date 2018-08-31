@@ -38,17 +38,19 @@ class MemoListTableViewController: UITableViewController {
         return memoList.count
     }
     
-
-    /*
+    // セルを作る
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        // テーブルのセルを参照
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        // テーブルにwebListのデータを表示
+        let memoData = memoList[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = memoData.name
+        cell.detailTextLabel?.text = memoData.url
+        
         return cell
     }
-    */
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
