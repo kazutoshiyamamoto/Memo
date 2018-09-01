@@ -9,6 +9,10 @@
 import UIKit
 
 class MemoListTableViewController: UITableViewController {
+    
+    // メモデータを格納する配列
+    var memoList = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +38,7 @@ class MemoListTableViewController: UITableViewController {
     
     // セクション内の行数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // 配列webListの値の個数
+        // 配列memoListの値の個数
         return memoList.count
     }
     
@@ -43,10 +47,9 @@ class MemoListTableViewController: UITableViewController {
         // テーブルのセルを参照
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        // テーブルにwebListのデータを表示
+        // テーブルにmemoListのデータを表示
         let memoData = memoList[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = memoData.name
-        cell.detailTextLabel?.text = memoData.url
         
         return cell
     }
