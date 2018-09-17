@@ -59,6 +59,9 @@ class ViewController: UIViewController {
         } catch let error as NSError {
             print("保存に失敗。 \n \(error)")
         }
+        // 保存したテキストデータを配列に格納する
+        let memoListTableViewController: MemoListTableViewController = MemoListTableViewController()
+        memoListTableViewController.memoList.append(thePass)
     }
     
     // ファイルからの読み込み
