@@ -11,8 +11,7 @@ import UIKit
 class MemoListTableViewController: UITableViewController {
     
     // メモデータを格納する配列
-    var memoList = []
-    
+    var memoList: [Any] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
