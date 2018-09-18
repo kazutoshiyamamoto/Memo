@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         }
         // 保存したテキストデータを配列に格納する
         let memoListTableViewController: MemoListTableViewController = MemoListTableViewController()
-        memoListTableViewController.memoList.append(thePass)
+        memoListTableViewController.memoList.append(textData!)
     }
     
     // ファイルからの読み込み
