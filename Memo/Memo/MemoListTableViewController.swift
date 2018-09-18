@@ -11,7 +11,7 @@ import UIKit
 class MemoListTableViewController: UITableViewController {
     
     // メモデータを格納する配列
-    var memoList: [Any] = []
+    var memoList: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class MemoListTableViewController: UITableViewController {
         
         // テーブルにmemoListのデータを表示
         let memoData = memoList[(indexPath as NSIndexPath).row]
-        cell.textLabel?.text = memoData.name
+        cell.textLabel?.text = memoData
         
         return cell
     }
