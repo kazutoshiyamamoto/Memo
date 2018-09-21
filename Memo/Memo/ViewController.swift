@@ -91,7 +91,7 @@ class ViewController: UIViewController {
     @objc func keyboardChangeFrame(_ notification: Notification) {
         // キーボードのframeを調べる
         let userInfo = (notification as NSNotification).userInfo!
-        let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         
         // キーボードで隠れないようにテキストビューの高さを変更する
         var textViewFrame = textMemoryView.frame
