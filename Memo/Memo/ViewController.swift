@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textMemoryView: UITextView!
     
     // テキストファイルのパス
-    let thePass = NSHomeDirectory() + "/Documents/myTextfile.txt"
+    var thePass = NSHomeDirectory() + "/Documents/myTextfile.txt"
     // テキストビューのframe
     var originalFrame: CGRect?
     

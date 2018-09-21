@@ -96,8 +96,8 @@ class MemoListTableViewController: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 // 行のデータを取り出す
                 let memoData = memoList[(indexPath as NSIndexPath).row]
-                // 移動先のビューコントローラのdataプロパティに値を設定する
-                (segue.destination as! ViewController).data = memoData
+                // 移動先のビューコントローラのテキストファイルのパスに値を設定する
+                (segue.destination as! ViewController).thePass = memoData
             }
         }
     }
