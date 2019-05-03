@@ -32,13 +32,13 @@ class ViewController: UIViewController {
         let notification = NotificationCenter.default
         
         // キーボードが登場した
-        notification.addObserver(self, selector: #selector(ViewController.keyboardDidShow(_:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        notification.addObserver(self, selector: #selector(ViewController.keyboardDidShow(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         
         // キーボードのframeが変更された
-        notification.addObserver(self, selector: #selector(ViewController.keyboardChangeFrame(_:)), name: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil)
+        notification.addObserver(self, selector: #selector(ViewController.keyboardChangeFrame(_:)), name: UIResponder.keyboardDidChangeFrameNotification, object: nil)
         
         // キーボードが退場した
-        notification.addObserver(self, selector: #selector(ViewController.keyboardDidHide(_:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+        notification.addObserver(self, selector: #selector(ViewController.keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
     
     }
     
