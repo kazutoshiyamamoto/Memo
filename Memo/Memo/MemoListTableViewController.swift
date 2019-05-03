@@ -12,15 +12,15 @@ class MemoListTableViewController: UITableViewController {
     
     // メモデータを格納する配列
     var memoList: [String] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     // セクションの個数
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -43,40 +43,36 @@ class MemoListTableViewController: UITableViewController {
         
         return cell
     }
-
+    
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
+     // Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+     // Delete the row from the data source
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     } else if editingStyle == .insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
     
     // 新規メモ作成
     @IBAction func CreateNewNote(_ sender: Any) {
-//        let storyboard: UIStoryboard = UIStoryboard(name: "MemoEdit", bundle: nil)
-//        let memoScreen = storyboard.instantiateInitialViewController() as! UINavigationController
-//        present(memoScreen, animated: true, completion: nil)
-        
         let storyboard: UIStoryboard = UIStoryboard(name: "MemoEdit", bundle: Bundle.main)
         let memoScreen: MemoEditViewController = storyboard.instantiateInitialViewController() as! MemoEditViewController
         self.navigationController?.pushViewController(memoScreen, animated: true)
