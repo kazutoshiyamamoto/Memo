@@ -32,13 +32,13 @@ class MemoEditViewController: UIViewController {
         let notification = NotificationCenter.default
         
         // キーボードが登場した
-        notification.addObserver(self, selector: #selector(ViewController.keyboardDidShow(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        notification.addObserver(self, selector: #selector(MemoEditViewController.keyboardDidShow(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         
         // キーボードのframeが変更された
-        notification.addObserver(self, selector: #selector(ViewController.keyboardChangeFrame(_:)), name: UIResponder.keyboardDidChangeFrameNotification, object: nil)
+        notification.addObserver(self, selector: #selector(MemoEditViewController.keyboardChangeFrame(_:)), name: UIResponder.keyboardDidChangeFrameNotification, object: nil)
         
         // キーボードが退場した
-        notification.addObserver(self, selector: #selector(ViewController.keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+        notification.addObserver(self, selector: #selector(MemoEditViewController.keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
     }
     
     override func didReceiveMemoryWarning() {

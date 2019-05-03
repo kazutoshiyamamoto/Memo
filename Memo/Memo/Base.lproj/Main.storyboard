@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,9 +34,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showMemoPage" id="KCz-VG-MPj"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -45,7 +41,13 @@
                             <outlet property="delegate" destination="2rI-eG-bfP" id="lsn-4O-dXh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="メモリスト" id="JT8-Z9-rrN"/>
+                    <navigationItem key="navigationItem" title="メモリスト" id="JT8-Z9-rrN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Vyc-JE-W9e">
+                            <connections>
+                                <action selector="CreateNewNote:" destination="2rI-eG-bfP" id="3sl-ox-33I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWW-Z5-FjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,74 +68,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xdg-lo-Doz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1425" y="124"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Memo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ta6-yb-gxt">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <gestureRecognizers/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jhC-qC-ahw" appends="YES" id="dYI-4Q-hjx"/>
-                                </connections>
-                            </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QW2-bs-qf2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Cansel" id="dz7-Fi-47m">
-                                        <connections>
-                                            <action selector="cansel:" destination="BYZ-38-t0r" id="YbW-Zq-sDj"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="sd5-Rq-Exd">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y7S-pp-MHK">
-                                            <rect key="frame" x="83.333333333333329" y="7" width="83.999999999999986" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="read"/>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem title="Save" width="307" id="5rZ-4B-xFv">
-                                        <connections>
-                                            <action selector="saveToFile:" destination="BYZ-38-t0r" id="pEF-WV-i27"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <gestureRecognizers/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="textMemoryView" destination="Ta6-yb-gxt" id="xc6-35-NdQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="nNe-AW-Oux">
-                    <connections>
-                        <action selector="tapView:" destination="BYZ-38-t0r" id="1SW-p3-H7G"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="down" id="jhC-qC-ahw">
-                    <connections>
-                        <action selector="swipeGesture:" destination="BYZ-38-t0r" id="2dt-Sp-ZFt"/>
-                    </connections>
-                </swipeGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="45" y="124"/>
         </scene>
     </scenes>
 </document>

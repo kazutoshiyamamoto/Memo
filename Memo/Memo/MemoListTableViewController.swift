@@ -70,7 +70,18 @@ class MemoListTableViewController: UITableViewController {
         return true
     }
     */
-
+    
+    // 新規メモ作成
+    @IBAction func CreateNewNote(_ sender: Any) {
+//        let storyboard: UIStoryboard = UIStoryboard(name: "MemoEdit", bundle: nil)
+//        let memoScreen = storyboard.instantiateInitialViewController() as! UINavigationController
+//        present(memoScreen, animated: true, completion: nil)
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "MemoEdit", bundle: Bundle.main)
+        let memoScreen: MemoEditViewController = storyboard.instantiateInitialViewController() as! MemoEditViewController
+        self.navigationController?.pushViewController(memoScreen, animated: true)
+    }
+    
     // セグエで移動する前にデータを受け渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // セグエがshowWebPageのときの処理
@@ -80,7 +91,7 @@ class MemoListTableViewController: UITableViewController {
                 // 行のデータを取り出す
                 let memoData = memoList[(indexPath as NSIndexPath).row]
                 // 移動先のビューコントローラのテキストファイルのパスに値を設定する
-                (segue.destination as! ViewController).thePass = memoData
+                (segue.destination as! MemoEditViewController).thePass = memoData
             }
         }
     }
