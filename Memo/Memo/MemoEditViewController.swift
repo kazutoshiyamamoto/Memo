@@ -54,6 +54,7 @@ class MemoEditViewController: UIViewController {
         // テキストデータの保存をトライする
         do {
             try textData?.write(toFile: thePass, atomically: true, encoding: String.Encoding.utf8)
+            self.showSavingAlert()
         } catch let error as NSError {
             print("保存に失敗。 \n \(error)")
         }
@@ -62,37 +63,12 @@ class MemoEditViewController: UIViewController {
         memoListTableViewController.memoList.append(textData!)
     }
     
-    // ファイルからの読み込み
-    func readFromFile() {
-        do {
-            let textData = try String(contentsOfFile: thePass, encoding: String.Encoding.utf8)
-            textMemoryView.text = textData
-        } catch let error as NSError {
-            print("保存に失敗。 \n \(error)")
-        }
-    }
-        
-    // キーボードが表示された時に実行する
-    @objc func keyboardDidShow(_ notification: Notification) {
-        // keyboardChangeFrameも発生するのでそちらで処理する
-    }
-    
-    // キーボードのサイズが変化した時の処理
-    @objc func keyboardChangeFrame(_ notification: Notification) {
-        // キーボードのframeを調べる
-        let userInfo = (notification as NSNotification).userInfo!
-        let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        
-        // キーボードで隠れないようにテキストビューの高さを変更する
-        var textViewFrame = textMemoryView.frame
-        textViewFrame.size.height = keyboardFrame.minY - textViewFrame.minY - 5
-        textMemoryView.frame = textViewFrame
-    }
-    
-    // キーボードが退場した時の処理
-    @objc func keyboardDidHide(_ notification: Notification) {
-        // テキストビューのサイズを戻す
-        textMemoryView.frame = originalFrame!
+    private func showSavingAlert() {
+        let alert: UIAlertController = UIAlertController(title: "保存しました", message: "", preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{(action: UIAlertAction!) -> Void in
+        })
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
     }
     
     // タップでキーボードを下げる
@@ -120,5 +96,38 @@ class MemoEditViewController: UIViewController {
         } catch let error as NSError {
             print("保存に失敗。 \n \(error)")
         }
+    }
+    
+    // ファイルからの読み込み
+    func readFromFile() {
+        do {
+            let textData = try String(contentsOfFile: thePass, encoding: String.Encoding.utf8)
+            textMemoryView.text = textData
+        } catch let error as NSError {
+            print("保存に失敗。 \n \(error)")
+        }
+    }
+    
+    // キーボードが表示された時に実行する
+    @objc func keyboardDidShow(_ notification: Notification) {
+        // keyboardChangeFrameも発生するのでそちらで処理する
+    }
+    
+    // キーボードのサイズが変化した時の処理
+    @objc func keyboardChangeFrame(_ notification: Notification) {
+        // キーボードのframeを調べる
+        let userInfo = (notification as NSNotification).userInfo!
+        let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        // キーボードで隠れないようにテキストビューの高さを変更する
+        var textViewFrame = textMemoryView.frame
+        textViewFrame.size.height = keyboardFrame.minY - textViewFrame.minY - 5
+        textMemoryView.frame = textViewFrame
+    }
+    
+    // キーボードが退場した時の処理
+    @objc func keyboardDidHide(_ notification: Notification) {
+        // テキストビューのサイズを戻す
+        textMemoryView.frame = originalFrame!
     }
 }
