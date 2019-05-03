@@ -57,9 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				FD2318312115F314004DE8A5 /* AppDelegate.swift */,
+				FD0571992136E22A0040E9D3 /* MemoListTableViewController.swift */,
 				FD2318332115F314004DE8A5 /* ViewController.swift */,
 				FD2318352115F314004DE8A5 /* Main.storyboard */,
-				FD0571992136E22A0040E9D3 /* MemoListTableViewController.swift */,
 				FD2318382115F315004DE8A5 /* Assets.xcassets */,
 				FD23183A2115F315004DE8A5 /* LaunchScreen.storyboard */,
 				FD23183D2115F315004DE8A5 /* Info.plist */,
@@ -99,7 +99,7 @@
 				TargetAttributes = {
 					FD23182D2115F314004DE8A5 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -294,7 +294,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.Memo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -312,7 +312,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.Memo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
