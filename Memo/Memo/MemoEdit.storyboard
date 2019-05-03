@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Memo Edit View Controller-->
+        <scene sceneID="WSi-UD-DLp">
+            <objects>
+                <viewController id="PCf-Mt-f41" customClass="MemoEditViewController" customModule="Memo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Xs-qv-7e9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-wA-4uj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Cansel" id="Gw6-OA-FPh">
+                                        <connections>
+                                            <action selector="cansel:" destination="PCf-Mt-f41" id="g8y-vD-dyD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Save" width="307" id="NVU-mK-lP6">
+                                        <connections>
+                                            <action selector="saveToFile:" destination="PCf-Mt-f41" id="OgH-qH-hCW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kk7-Tk-qzS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MXM-ZL-5Mu" appends="YES" id="i1n-86-nJU"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="kk7-Tk-qzS" firstAttribute="top" secondItem="dMi-wA-4uj" secondAttribute="bottom" id="7Hv-YT-Gnq"/>
+                            <constraint firstItem="kk7-Tk-qzS" firstAttribute="leading" secondItem="hNE-7A-aNp" secondAttribute="leading" id="Dht-qO-xUb"/>
+                            <constraint firstItem="dMi-wA-4uj" firstAttribute="leading" secondItem="hNE-7A-aNp" secondAttribute="leading" id="Glw-BL-GiL"/>
+                            <constraint firstItem="kk7-Tk-qzS" firstAttribute="bottom" secondItem="hNE-7A-aNp" secondAttribute="bottom" id="HfB-17-rD1"/>
+                            <constraint firstItem="dMi-wA-4uj" firstAttribute="top" secondItem="hNE-7A-aNp" secondAttribute="top" id="IXS-kp-v32"/>
+                            <constraint firstItem="kk7-Tk-qzS" firstAttribute="trailing" secondItem="hNE-7A-aNp" secondAttribute="trailing" id="Qw4-RG-KC2"/>
+                            <constraint firstItem="kk7-Tk-qzS" firstAttribute="top" secondItem="dMi-wA-4uj" secondAttribute="bottom" id="Xi9-FY-WOs"/>
+                            <constraint firstItem="dMi-wA-4uj" firstAttribute="trailing" secondItem="hNE-7A-aNp" secondAttribute="trailing" id="tIW-4a-BfO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hNE-7A-aNp"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="textMemoryView" destination="kk7-Tk-qzS" id="hxi-ai-C9v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkA-5e-wsN" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="42P-8z-nuf">
+                    <connections>
+                        <action selector="tapView:" destination="PCf-Mt-f41" id="OLi-Sp-dB2"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="MXM-ZL-5Mu">
+                    <connections>
+                        <action selector="swipeGesture:" destination="PCf-Mt-f41" id="wIZ-5s-qaD"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+</document>

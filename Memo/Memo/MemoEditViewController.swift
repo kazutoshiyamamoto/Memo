@@ -1,15 +1,15 @@
 //
-//  ViewController.swift
+//  MemoEditViewController.swift
 //  Memo
 //
-//  Created by home on 2018/08/04.
-//  Copyright © 2018年 Swift-beginners. All rights reserved.
+//  Created by home on 2019/05/03.
+//  Copyright © 2019 Swift-beginners. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class MemoEditViewController: UIViewController {
+
     @IBOutlet weak var textMemoryView: UITextView!
     
     // テキストファイルのパス
@@ -130,4 +130,3 @@ class ViewController: UIViewController {
         }
     }
 }
-

@@ -13,6 +13,8 @@
 		FD2318372115F314004DE8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2318352115F314004DE8A5 /* Main.storyboard */; };
 		FD2318392115F315004DE8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2318382115F315004DE8A5 /* Assets.xcassets */; };
 		FD23183C2115F315004DE8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD23183A2115F315004DE8A5 /* LaunchScreen.storyboard */; };
+		FD80EFE5227C098A00B30761 /* MemoEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD80EFE4227C098A00B30761 /* MemoEdit.storyboard */; };
+		FD80EFE7227C0AA700B30761 /* MemoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80EFE6227C0AA700B30761 /* MemoEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FD2318382115F315004DE8A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD23183B2115F315004DE8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD23183D2115F315004DE8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD80EFE4227C098A00B30761 /* MemoEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemoEdit.storyboard; sourceTree = "<group>"; };
+		FD80EFE6227C0AA700B30761 /* MemoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				FD2318312115F314004DE8A5 /* AppDelegate.swift */,
 				FD0571992136E22A0040E9D3 /* MemoListTableViewController.swift */,
-				FD2318332115F314004DE8A5 /* ViewController.swift */,
+				FD80EFE6227C0AA700B30761 /* MemoEditViewController.swift */,
 				FD2318352115F314004DE8A5 /* Main.storyboard */,
+				FD80EFE4227C098A00B30761 /* MemoEdit.storyboard */,
+				FD2318332115F314004DE8A5 /* ViewController.swift */,
 				FD2318382115F315004DE8A5 /* Assets.xcassets */,
 				FD23183A2115F315004DE8A5 /* LaunchScreen.storyboard */,
 				FD23183D2115F315004DE8A5 /* Info.plist */,
@@ -128,6 +134,7 @@
 			files = (
 				FD23183C2115F315004DE8A5 /* LaunchScreen.storyboard in Resources */,
 				FD2318392115F315004DE8A5 /* Assets.xcassets in Resources */,
+				FD80EFE5227C098A00B30761 /* MemoEdit.storyboard in Resources */,
 				FD2318372115F314004DE8A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +148,7 @@
 			files = (
 				FD2318342115F314004DE8A5 /* ViewController.swift in Sources */,
 				FD2318322115F314004DE8A5 /* AppDelegate.swift in Sources */,
+				FD80EFE7227C0AA700B30761 /* MemoEditViewController.swift in Sources */,
 				FD05719A2136E22A0040E9D3 /* MemoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
