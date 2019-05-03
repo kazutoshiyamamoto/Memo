@@ -16,12 +16,7 @@ class MemoEditViewController: UIViewController {
     var thePass = NSHomeDirectory() + "/Documents/myTextfile.txt"
     // テキストビューのframe
     var originalFrame: CGRect?
-    
-    override func viewDidAppear(_ animated: Bool) {
-        // テキストビューの元のframeを保存する
-        originalFrame = textMemoryView.frame
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +34,11 @@ class MemoEditViewController: UIViewController {
         
         // キーボードが退場した
         notification.addObserver(self, selector: #selector(MemoEditViewController.keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // テキストビューの元のframeを保存する
+        originalFrame = textMemoryView.frame
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,15 +71,7 @@ class MemoEditViewController: UIViewController {
             print("保存に失敗。 \n \(error)")
         }
     }
-    
-    // 編集キャンセルボタン
-    @IBAction func cansel(_ sender: UIBarButtonItem) {
-        // キーボードを下げる
-        view.endEditing(true)
-        // ファイルから読み込む
-        readFromFile()
-    }
-    
+        
     // キーボードが表示された時に実行する
     @objc func keyboardDidShow(_ notification: Notification) {
         // keyboardChangeFrameも発生するのでそちらで処理する
